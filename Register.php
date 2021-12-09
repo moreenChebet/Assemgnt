@@ -7,21 +7,28 @@
 </head>
  
 <body>
- <div id="form">
-   <form action="process.php" method="POST">
-    <p>
-       <label>Username: </label>
-       <input type="text" id="user" name="user"/>
-    </p>
-    <p>
-       <label>Password: </label>
-       <input type="password" id="pass" name="pass"/>
-    </p>
-    <p>
-       <input type="submit" id="btn" value="login"/>
-    </p>
-   </form>
- </div>
+    <div class="Header">
+       <h2>Register</h2>
+    </div>
+ 
+    <form action="Register.php" method="POST">
+      <div class="input-group">
+         <label>Username: </label>
+         <input type="text" id="user" name="user"/>
+      </div>
+      <div class="input-group">
+         <label>Password: </label>
+         <input type="password" id="pass" name="pass_1"/>
+      </div>
+      <div class="input-group">
+        <label>Confirm password: </label>
+        <input type="passsword" id="pass" name="pass_2"/>
+      </div>
+      <div class="input-group">
+         <input type="submit" id="btn" value="login"/>
+      </div>
+    </form>
+ 
  
 </body>
 </html>
