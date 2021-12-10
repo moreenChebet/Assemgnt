@@ -10,6 +10,8 @@
     <div class="Header">
        <h2>Register</h2>
     </div>
+
+<div class="form-div">
  
     <form action="Register.php" method="POST">
       <div class="input-group">
@@ -35,7 +37,7 @@
          Already a member?<a href="login.php">login</a>
       </p>
     </form>
- 
+ </div>
  
 </body>
 </html>
