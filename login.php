@@ -5,6 +5,9 @@
      <title>The login page</title>
      <link rel="stylesheet" type="text/css" href="register.php"/>
      <link rel="stylesheet" type="text/css" href="login.php"/>
+     <link rel="stylesheet" type="text/css" href="style.css"/>
+     <link rel="stylesheet" type="text/css" href="errors.php"/>
+     <link rel="stylesheet" type="text/css" href="server.php"/>
 </head>
 
 <body>

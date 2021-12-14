@@ -12,8 +12,9 @@
     </div>
 
 <div class="form-div">
- 
     <form action="Register.php" method="POST">
+    <!-- display validation errors here -->
+    <?php include('errors.php'); ?>
       <div class="input-group">
          <label>Username: </label>
          <input type="text" id="user" name="user"/>
