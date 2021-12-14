@@ -18,12 +18,12 @@ body{
     padding:20px;
 }
 .form-div{
-display:flex;
-align-items:center;
-justify-content: center;
+    display:flex;
+    align-items:center;
+    justify-content: center;
 }
 .form{
-    width:10%;
+    width:30%;
     margin:0px auto;
     padding:20px;
     border:1px solid #B0C4DE;
@@ -36,11 +36,11 @@ justify-content: center;
 .input-group label{
     display:block;
     text-align:left;
-    margin:3px;
+    margin:0px;
 }
 .input-group input{
     height:30px;
-    width:93%;
+    width:150%;
     padding:5px 10px;
     font-size:16px;
     border-radius:5px;

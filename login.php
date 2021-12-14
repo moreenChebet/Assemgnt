@@ -4,6 +4,7 @@
 <head>
      <title>The login page</title>
      <link rel="stylesheet" type="text/css" href="register.php"/>
+     <link rel="stylesheet" type="text/css" href="login.php"/>
 </head>
 
 <body>
