@@ -4,6 +4,7 @@
 <head>
    <title>Login page</title>
    <link rel="stylesheet" type="text/css" href="style.css"/>
+   
 </head>
  
 <body>
@@ -15,13 +16,14 @@
     <form action="Register.php" method="POST">
     <!-- display validation errors here -->
     <?php include('errors.php'); ?>
+    
       <div class="input-group">
          <label>Username: </label>
-         <input type="text" id="user" name="user"/>
+         <input type="text" id="user" name="user" value="<?php echo $username ?>"/>
       </div>
       <div class="input-group">
          <label>Email: </label>
-         <input type="text" id="email" name="email"/>
+         <input type="text" id="email" name="email" value="<?php echo $email ?>"/>
       </div>
       <div class="input-group">
          <label>Password: </label>

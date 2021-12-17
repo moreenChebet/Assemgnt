@@ -1,4 +1,6 @@
-<?php
+<?
+    session_start();
+
     $username="";
     $email="";
     $errors=array();
@@ -29,13 +31,47 @@
 
     //if there are no errrors, save user to database
     if (count($errors)==0) {
-        $password=md5($password_1)//encrypt password before storing in the database(security)
+        $password = md5($password_1);//encrypt password before storing in the database(security)
         $sql="INSERT INTO users (username, email, password)
                 VALUES('$username','$email','$password')";
         
         mysqli_query($db, $sql);
+       
+    }
+   }
+
+    //log user from login page
+    if(isset($_POST['login'])){
+      $username=mysql_real_escape_string($_POST['username']);
+      $password=mysql_real_escape_string($_POST['password']);
+      
+      if (empty($username)){
+          array_push($errors, "Username is required"); 
+      }
+      if (empty($password)){
+          array_push($errors, "Password is required"); 
+      }
+      if (count($errors)==0){
+          $password=md5($password); //encrypt password before comparison with the one in the database
+          $query="SELECT* FROM users WHERE username='$username' AND password='$password'";
+          $result=mysqli_query($db, $query);
+          if (mysqli_num_rows($result)==1){
+              //log user in
+               $_session['username']=$username;
+               $_session['success']="You are now logged in";
+               header('location:index.php'); //redirect to home page
+          }else{
+              array_push($errors, "Wrong username/password combination");
+              header('location:index.php');
+          }
+      }
     }
 
-   }
+   //logout
+    if (isset($_GET['logout'])){
+        session.destroy();
+        unset($_session['username']);
+        header('location: index.php');
+    }
 
 ?>
