@@ -13,28 +13,26 @@
     </div>
 
 <div class="form-div">
-    <form action="Register.php" method="POST">
+    <form action="server.php" method="POST">
     <!-- display validation errors here -->
-    <?php include('errors.php'); ?>
-    
       <div class="input-group">
          <label>Username: </label>
-         <input type="text" id="user" name="user" value="<?php echo $username ?>"/>
+         <input type="text" id="user" name="username" value=""/>
       </div>
       <div class="input-group">
          <label>Email: </label>
-         <input type="text" id="email" name="email" value="<?php echo $email ?>"/>
+         <input type="text" id="email" name="email" value=""/>
       </div>
       <div class="input-group">
          <label>Password: </label>
-         <input type="password" id="pass" name="pass_1"/>
+         <input type="password" id="pass" name="password_1"/>
       </div>
       <div class="input-group">
         <label>Confirm password: </label>
-        <input type="passsword" id="pass" name="pass_2"/>
+        <input type="password" id="pass" name="password_2"/>
       </div>
       <div class="input-group">
-         <input type="submit" id="btn" value="Register"/>
+         <input type="submit" id="btn" value="register" name="reg_user"/>
       </div>
       <p>
          Already a member?<a href="login.php">login</a>

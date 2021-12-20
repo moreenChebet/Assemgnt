@@ -1,4 +1,4 @@
-<?php include ('server.php') 
+<?php include ('server.php');
     //if user is not logged in they cannot acccess this page
     if(empty($_session['username'])){
         header("location:login.php");
@@ -32,10 +32,10 @@
                  </div>
         <?php endif ?>
 
-        <?php if(isset($_session["username"]))?>
+        <?php ifelse(isset($_session["username"]))?>
             <P>Welcome<strong><?php echo $_session["username"]; ?></strong></P>
             <p><a href="index.php?logout='1'" style="color:red; ">Logout</a></p>
-        <?php endif ?> 
+        <?php endifelse ?> 
         
     </div>
     

@@ -1,4 +1,4 @@
-<?php include('server.php'); ?>
+<?php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
@@ -12,12 +12,14 @@
     <div class="header">
         <h2>Login</h2>
     </div>
+  
+    
     <form action="login.php" method="POST">
     <!-- display validation errors here -->
-    <?php include('errors.php'); ?>
+   <?php include 'errors.php';?>
         <div class="input-group">
             <label>Username: </label>
-            <input type="text" id="user" name="user"/>
+            <input type="text" id="user" name="username"/>
         </div>
        
         <div class="input-group">
@@ -25,7 +27,7 @@
             <input type="password" id="pass" name="password"/>
         </div>
         <div class="input-group">
-            <button type="submit" class="btn" name"login">Login</button>
+            <button type="submit" class="btn" name="login_user">Login</button>
         </div>
         <p>
              Not yet a member?<a href="Register.php">Sign in</a>
